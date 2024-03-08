@@ -1,5 +1,5 @@
 dist
-JscorpPayments.egg-info
+jscorp_payments.egg-info
 venv
 .idea
 .vscode/
