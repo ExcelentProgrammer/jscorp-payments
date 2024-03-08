@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="jscorp-payments",
-    version="1.0.2",
+    version="1.0.5",
     author="A'zamov Samandar",
     author_email="azamov.samandar.programmer@gmail.com",
     description="JscorpPayments",

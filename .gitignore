@@ -3,3 +3,4 @@ jscorp_payments.egg-info
 venv
 .idea
 .vscode/
+.pypirc

@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class ClickConfig(AppConfig):
-    name = 'click'
+    name = 'jscorp-payments.click'
