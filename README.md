@@ -1,6 +1,7 @@
-[![Downloads](https://img.shields.io/pypi/v/JscorpPayments)](https://pypi.org/project/JscorpPayments)
+[![Downloads](https://img.shields.io/pypi/v/jscorp-payments)](https://pypi.org/project/jscorp-payments)
 
 ### Requirements
+
 ````
 pip install django
 pip install djangorestframework
@@ -37,22 +38,29 @@ python manage.py migrate
 ```
 
 ### Create paycom user
+
 ```python
-python manage.py create_paycom_user
+python
+manage.py
+create_paycom_user
 ```
 
 ### view.py
+
 ```python
 from paycomuz.views import MerchantAPIView
 from paycomuz.methods_subscribe_api import Paycom
 from django.urls import path
 
+
 class CheckOrder(Paycom):
     def check_order(self, amount, account):
         return self.ORDER_FOUND
 
+
 class TestView(MerchantAPIView):
     VALIDATE_CLASS = CheckOrder
+
 
 urlpatterns = [
     path('paycom/', TestView.as_view())
@@ -60,9 +68,12 @@ urlpatterns = [
 ```
 
 ### create_initialization.py
+
 https://help.paycom.uz/uz/initsializatsiya-platezhey/otpravka-cheka-po-metodu-get
+
 ```python
 from paycomuz.methods_subscribe_api import Paycom
+
 paycom = Paycom()
 url = paycom.create_initialization(amount=5.00, order_id='197', return_url='https://example.com/success/')
 print(url)
