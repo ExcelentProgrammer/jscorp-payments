@@ -5,7 +5,7 @@
 ````
 pip install django
 pip install djangorestframework
-pip install payme-django 
+pip install jscorp-payments
 pip install requests
 
 # supported versions
